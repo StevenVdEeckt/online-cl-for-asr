@@ -14,7 +14,7 @@ Task  | Country | #utterances (train)
 us | United States | 349.6k
 eng | England | 117.2k
 aus | Australia | 57.1k
-ind | India | a | 71.6k
+ind | India  | 71.6k
 sco | Scotland | 10.7k
 ire | Ireland | 7.3k
 
