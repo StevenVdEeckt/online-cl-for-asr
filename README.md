@@ -1,6 +1,16 @@
 # Online Continual Learning for Automatic Speech Recognition
 Supplementary material to the paper "Rehearsal-Free Online Continual Learning for Automatic Speech Recognition", accepted at Interspeech 2023.
 
+To cite the paper, use:
+```
+@inproceedings{vandereeckt2023_interspeech,
+  author = {Vander Eeckt, Steven and Van hamme, Hugo},  
+  title = {Rehearsal-Free Online Continual Learning for Automatic Speech Recognition},
+  booktitle = {Proc. Interspeech 2023},
+  year = {2023},  
+}
+```
+
 ## ESPnet
 
 ESPnet [Wanatabe et al., 2018] is used for all experiments. More specifically, we use ESPnet2.
