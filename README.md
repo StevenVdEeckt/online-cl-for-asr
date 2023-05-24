@@ -44,16 +44,18 @@ A small 'test experiment' is used to determine the values of the hyper-parameter
 
 To determine the optimal value for a hyper-parameter, we try three different values and choose the value that results in the lowest AWER (average WER), where AWER for the 'test experiment' is computed as: $AWER=(2*WER_{us}+WER_{test})/3$ (Since the 'test' task is so small, forgetting is expected to be less of an issue in the 'test experiment' than in the 'real experiment'. To make sure we still select a hyper-parameter value that overcomes catastrophic forgetting sufficiently, we give $WER_{us}$ of initial task us a higher weight).  The hyper-parameter value with the lowest AWER is considered the optimal one. 
 
-The table below shows the hyper-parameters optimized for each method, as well as the values tried, the default value and the optimal value. Note that for all baselines from the table below, we consider the implementation of [Vander Eeckt and Van hamme, 2022]. Thus, see [Vander Eeckt and Van hamme, 2022] for a meaning of the hyper-parameters of the baselines. 
+The table below shows the hyper-parameters optimized for each method, as well as the values tried, the default value and the optimal value. Between square brackets for the two last columns is the $AWER$ for the given setting on the test experiment. 
 
-method  | hyper-parameters | values tried | default | optimal
+method  | hyper-parameters | values tried | default [$AWER$] | optimal [$AWER$]
 ------------- | ------------- | ------------- | ------------- | ------------- 
-EWC | $\lambda$ | $(100, 500, 1000)$ | $1000$ | $500$
-LWF | $\lambda$ | $(0.10, 0.25, 0.50)$ | $0.10$ | $0.25$
-ER | $\lambda$ | $(0.1, 1.0, 2.0)$ | $0.1$ | $1.0$
-AOS (ours) | $\tau$, $\tau_2$, $\lambda$ | $(1, 2, 3)$, $(1, 2, 3)$, $(0.0, 0.1, 0.3)$ | $1, 1, 0.1$ | $2, 1, 0.1$
+EWC | $\lambda$ | $(100, 500, 1000)$ | $1000$ $[17.14]$ | $500$ $[17.04]$
+LWF | $\lambda$ | $(0.10, 0.25, 0.50)$ | $0.10$ $[17.22]$ | $0.25$ $[17.20]$
+ER | $\lambda$ | $(0.1, 1.0, 2.0)$ | $0.1$ $[17.04]$ | $1.0$ $[16.93]$
+AOS (ours) | $\tau$, $\tau_2$, $\lambda$ | $(1, 2, 3)$, $(1, 2, 3)$, $(0.0, 0.1, 0.3)$ | $1, 1, 0.1$ $[16.85]$ | $2, 1, 0.1$ $[16.80]$
 
+It can be seen that for all methods (both baselines and our method), the difference in terms of performance between the default hyper-parameter value and the optimal one is not large.  
 
+Note that for all baselines from the table below, we consider the implementation of [Vander Eeckt and Van hamme, 2022]. Thus, see [Vander Eeckt and Van hamme, 2022] for a meaning of the hyper-parameters of the baselines. 
 
 ## References 
 
