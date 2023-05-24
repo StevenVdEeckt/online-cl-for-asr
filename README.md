@@ -15,7 +15,7 @@ The model folder also contains the token list (i.e. outputs) of the model. It co
 
 The Mozilla Common Voice dataset [Ardila et al., 2020] is used for the experiments. We consider the Common Voice 7.0 release (July 2021) and only the English data. To obtain six tasks, we consider only the speakers whose country is known and take the following six countries to obtain six tasks: 
 
-Task  | Country | #utterances (train)
+task  | country | #utterances (train)
 ------------- | ------------- | ------------- 
 us | United States | 349.6k
 eng | England | 117.2k
@@ -30,12 +30,22 @@ In all the experiments, us, being the largest task, is the initial task, i.e. it
 
 ## hyper-parameters
 
-A small 'test experiment' is used to determine the values of the hyper-parameters. To this end, English from Phillippines, Singapore, Hongkong, Malaysia, Wales and Bermuda is used as one small 'test' task. This task, consisting of 13.2k utterances, is in size approximately 5% of the tasks of the 'real experiment'. Thus, the number of utterances that has to be learned in an online continual learning fashion is much smaller for this 'test experiment' than for the 'real experiment'. To determine the optimal value for a hyper-parameter, we try three different values and choose the value that results in the lowest AWER (average WER) over initial task us and the test task. Since the tesk task is so small, we put extra weight on 'overcoming forgetting' by giving us a higher weight (2 vs. 1) in. the computation of AWER. 
+A small 'test experiment' is used to determine the values of the hyper-parameters. To this end, English from Phillippines, Singapore, Hongkong, Malaysia, Wales and Bermuda is used as one small 'test' task. This task, consisting of 13.2k utterances, is in size approximately 5% of the tasks of the 'real experiment'. Thus, the number of utterances that has to be learned in an online continual learning fashion is much smaller for this 'test experiment' than for the 'real experiment'. 
+To determine the optimal value for a hyper-parameter, we try three different values and choose the value that results in the lowest AWER (average WER) over initial task us and the test task. Since the tesk task is so small, we put extra weight on 'overcoming forgetting' by giving us a higher weight (2 vs. 1) in. the computation of AWER. 
+
+The table below shows the hyper-parameters optimized for each method, as well as the values tried, the default value and the optimal value. 
+
+method  | implementation | hyper-parameters | values tried | default | optimal
+------------- | ------------- | ------------- | ------------- | ------------- | ------------- 
+EWC | [Vander Eeckt and Van hamme, 2022] | $\lambda$ | 100, 500, 1000 | 1000 | 500
+
 
 ## References 
 
 Ardila et al., “Common voice: A massively-multilingual speech corpus,” in Proceedings of the 12th Conference on Language Resources and Evaluation (LREC 2020), 2020, pp. 4211–4215. 
 
 T. Kudo and J. Richardson, “SentencePiece: A simple and language independent subword tokenizer and detokenizer for neural text processing,” in Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing: System Demonstrations. Association for Computational Linguistics, 2018, pp. 66–71. 
+
+S. Vander Eeckt and H. Van hamme, “Continual learning for monolingual end-to-end automatic speech recognition,” Proceedings EUSIPCO 2022, 2022.
 
 S. Watanabe et al., “ESPnet: End-to-end speech processing toolkit,” in Proceedings of Interspeech, 2018, pp. 2207–2211. 
