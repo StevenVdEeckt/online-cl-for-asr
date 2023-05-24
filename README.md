@@ -30,6 +30,7 @@ In all the experiments, us, being the largest task, is the initial task, i.e. it
 
 ## hyper-parameters
 
+A small 'test experiment' is used to determine the values of the hyper-parameters. To this end, English from Phillippines, Singapore, Hongkong, Malaysia, Wales and Bermuda is used as one small 'test' task. This task, consisting of 13.2k utterances, is in size approximately 5% of the tasks of the 'real experiment'. Thus, the number of utterances that has to be learned in an online continual learning fashion is much smaller for this 'test experiment' than for the 'real experiment'. To determine the optimal value for a hyper-parameter, we try three different values and choose the value that results in the lowest AWER (average WER) over initial task us and the test task. Since the tesk task is so small, we put extra weight on 'overcoming forgetting' by giving us a higher weight (2 vs. 1) in. the computation of AWER. 
 
 ## References 
 
