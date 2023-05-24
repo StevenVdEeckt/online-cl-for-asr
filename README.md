@@ -33,11 +33,13 @@ In all the experiments, us, being the largest task, is the initial task, i.e. it
 A small 'test experiment' is used to determine the values of the hyper-parameters. To this end, English from Phillippines, Singapore, Hongkong, Malaysia, Wales and Bermuda is used as one small 'test' task. This task, consisting of 13.2k utterances, is in size approximately 5% of the tasks of the 'real experiment'. Thus, the number of utterances that has to be learned in an online continual learning fashion is much smaller for this 'test experiment' than for the 'real experiment'. 
 To determine the optimal value for a hyper-parameter, we try three different values and choose the value that results in the lowest AWER (average WER) over initial task us and the test task. Since the tesk task is so small, we put extra weight on 'overcoming forgetting' by giving us a higher weight (2 vs. 1) in. the computation of AWER. 
 
-The table below shows the hyper-parameters optimized for each method, as well as the values tried, the default value and the optimal value. 
+The table below shows the hyper-parameters optimized for each method, as well as the values tried, the default value and the optimal value. Note that for all baselines from the table below, we consider the implementation of [Vander Eeckt and Van hamme, 2022]. Thus, see [Vander Eeckt and Van hamme, 2022] for a meaning of the hyper-parameters of the baselines. 
 
-method  | implementation | hyper-parameters | values tried | default | optimal
-------------- | ------------- | ------------- | ------------- | ------------- | ------------- 
-EWC | [Vander Eeckt and Van hamme, 2022] | $\lambda$ | 100, 500, 1000 | 1000 | 500
+method  | hyper-parameters | values tried | default | optimal
+------------- | ------------- | ------------- | ------------- | ------------- 
+EWC | $\lambda$ | $(100, 500, 1000)$ | $1000$ | $500$
+ER | $\lambda$ | $(0.1, 1.0, 2.0)$ | $0.1$ | $1.0$
+
 
 
 ## References 
