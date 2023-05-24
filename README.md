@@ -26,7 +26,7 @@ The model folder also contains the token list (i.e. outputs) of the model. It co
 The Mozilla Common Voice dataset [Ardila et al., 2020] is used for the experiments. We consider the Common Voice 7.0 release (July 2021) and only the English data. To obtain six tasks, we consider only the speakers whose country is known and take the following six countries to obtain six tasks: 
 
 task  | country | #utterances (train)
-------------- | ------------- | ------------- 
+------------- | ------------- | :-------------:
 us | United States | 349.6k
 eng | England | 117.2k
 aus | Australia | 57.1k
