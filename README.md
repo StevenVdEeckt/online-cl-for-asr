@@ -46,7 +46,7 @@ To determine the optimal value for a hyper-parameter, we try three different val
 
 The table below shows the hyper-parameters optimized for each method, as well as the values tried, the default value and the optimal value. Between square brackets for the two last columns is the $AWER$ for the given setting on the test experiment. 
 
-method  | hyper-parameters | values tried | default [$AWER$] | optimal [$AWER$]
+method  | hyper-parameters | values tried | default | optimal
 ------------- | ------------- | ------------- | ------------- | ------------- 
 EWC | $\lambda$ | $(100, 500, 1000)$ | $1000$ $[17.14]$ | $500$ $[17.04]$
 LWF | $\lambda$ | $(0.10, 0.25, 0.50)$ | $0.10$ $[17.22]$ | $0.25$ $[17.20]$
