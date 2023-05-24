@@ -38,7 +38,9 @@ The table below shows the hyper-parameters optimized for each method, as well as
 method  | hyper-parameters | values tried | default | optimal
 ------------- | ------------- | ------------- | ------------- | ------------- 
 EWC | $\lambda$ | $(100, 500, 1000)$ | $1000$ | $500$
+LWF | $\lambda$ | $(0.10, 0.25, 0.50)$ | $0.10$ | $0.25$
 ER | $\lambda$ | $(0.1, 1.0, 2.0)$ | $0.1$ | $1.0$
+AOS (ours) | $\tau$, $\tau_2$, $\lambda$ | $(1, 2, 3)$, $(1, 2, 3)$, $(0.0, 0.1, 0.3)$ | $1, 1, 0.1$ | $2, 1, 0.1$
 
 
 
