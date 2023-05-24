@@ -1,4 +1,4 @@
-# Online Continual Learning for Automatic Speech Recognition
+# Rehearsal-Free Online Continual Learning for Automatic Speech Recognition
 Supplementary material to the paper "Rehearsal-Free Online Continual Learning for Automatic Speech Recognition", accepted at Interspeech 2023.
 
 To cite the paper, use:
