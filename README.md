@@ -40,8 +40,9 @@ In all the experiments, us, being the largest task, is the initial task, i.e. it
 
 ## hyper-parameters
 
-A small 'test experiment' is used to determine the values of the hyper-parameters. To this end, English from Phillippines, Singapore, Hongkong, Malaysia, Wales and Bermuda is used as one small 'test' task. This task, consisting of 13.2k utterances, is in size approximately 5% of the tasks of the 'real experiment'. Thus, the number of utterances that has to be learned in an online continual learning fashion is much smaller for this 'test experiment' than for the 'real experiment'. 
-To determine the optimal value for a hyper-parameter, we try three different values and choose the value that results in the lowest AWER (average WER) over initial task us and the test task. Since the test task is so small, we put extra weight on 'overcoming forgetting' by giving us a higher weight (2 vs. 1) in. the computation of AWER (thus, for the 'test experiment', $AWER=(2*WER_{us}+WER_{test})/3$. 
+A small 'test experiment' is used to determine the values of the hyper-parameters. To this end, English from Phillippines, Singapore, Hongkong, Malaysia, Wales and Bermuda is used as one small 'test' task. This task, consisting of 13.2k utterances, is in size approximately only 5% of the tasks of the 'real experiment'. 
+
+To determine the optimal value for a hyper-parameter, we try three different values and choose the value that results in the lowest AWER (average WER), where AWER for the 'test experiment' is computed as: $AWER=(2*WER_{us}+WER_{test})/3$ (Since the 'test' task is so small, forgetting is expected to be less of an issue in the 'test experiment' than in the 'real experiment'. To make sure we still select a hyper-parameter value that overcomes catastrophic forgetting sufficiently, we give $WER_{us}$ of initial task us a higher weight).  The hyper-parameter value with the lowest AWER is considered the optimal one. 
 
 The table below shows the hyper-parameters optimized for each method, as well as the values tried, the default value and the optimal value. Note that for all baselines from the table below, we consider the implementation of [Vander Eeckt and Van hamme, 2022]. Thus, see [Vander Eeckt and Van hamme, 2022] for a meaning of the hyper-parameters of the baselines. 
 
