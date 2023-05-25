@@ -3,7 +3,7 @@ Supplementary material to the paper "Rehearsal-Free Online Continual Learning fo
 
 To cite the paper, use:
 ```
-@inproceedings{vandereeckt2023_interspeech,
+@inproceedings{vandereeckt_interspeech2023,
   author = {Vander Eeckt, Steven and Van hamme, Hugo},  
   title = {Rehearsal-Free Online Continual Learning for Automatic Speech Recognition},
   booktitle = {Proc. Interspeech 2023},
